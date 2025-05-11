@@ -1,7 +1,8 @@
+from second_win import *
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import *
 from instr import *
-
+from final_win import *
 #app = QApplication([])
 #win = QWidget()
 
@@ -53,6 +54,10 @@ class MainWin(QWidget):
 
     def connects(self):
         self.btn_next.clicked.connect(self.next_click)
+
+    def next_click(self):
+        self.tw = TestWin()
+        self.hide()
 
     def initUI(self):
         self.btn_next = QPushButton(txt_next, self)
